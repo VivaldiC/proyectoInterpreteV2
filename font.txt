@@ -1,0 +1,19 @@
+dPaquete unPaquete;
+
+dEntero unEntero= 5;
+dString unEstring = "Hola Mundo";
+dFlotante unFlotante = 5.5;
+
+dRepetir (dEntero i = 0; i < 10 ; i = i + 1;){
+    dImprimir("Hola Mundo v 2.0");
+}
+
+dCondicion (unEntero == 5 ){
+    dImprimir("Sí es igual");
+}
+then {
+    dImprimir ("No es igual");
+}
+else{
+    dImprimir ("tampoco jeje");
+}
