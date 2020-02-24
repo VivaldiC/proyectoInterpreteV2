@@ -11,16 +11,26 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Stream;
 
+/**
+ *
+ * @author VIVALDI
+ */
+
 public class Lexer {
     private StringBuilder input = new StringBuilder();
+    //Es un tipo de string mas maneobrable
     private Token token;
+    //Se hace la memoria de token
     private String lexema;
     private boolean exausthed = false;
     private String errorMessage = "";
     private Set<Character> blankChars = new HashSet<Character>();
+    //HashSet no permite elementos repetidos
 
     public Lexer(String filePath) {
-        try (Stream<String> st = Files.lines(Paths.get(filePath))) {
+        //Se recibe la ubicacion del archivo, el cual luego es leido por lineas con Files.lines y guarado en un ArrayList de Strings
+        try (Stream<String> st = Files.lines(Paths.get(filePath)))
+        {
             st.forEach(input::append);
         } catch (IOException ex) {
             exausthed = true;

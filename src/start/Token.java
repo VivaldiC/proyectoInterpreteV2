@@ -56,6 +56,7 @@ public enum Token {
     Token(String regex) {
         pattern = Pattern.compile("^" + regex);
     }
+    //Buscalo los patrones que hemos señalado en la parte de arriba en el codigo
 
     int endOfMatch(String s) {
         Matcher m = pattern.matcher(s);
@@ -66,4 +67,7 @@ public enum Token {
 
         return -1;
     }
+    //Con el matcher es buscar unicamente las palabras que son 100% relacionadas
+    
+    
 }
