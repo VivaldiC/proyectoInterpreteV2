@@ -1,6 +1,6 @@
-dPaquete unPaquete;
+dPaquete paquete;
 
-dEntero unEntero= 5;
+dEntero unEntero = 5;
 dString unEstring = "Hola Mundo";
 dFlotante unFlotante = 5.5;
 
