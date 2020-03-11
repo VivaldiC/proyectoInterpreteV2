@@ -9,10 +9,11 @@ package start;
  *
  * @author VIVALDI
  */
+
 public class Tokens {
-    private String Token;
-    private String Lexema;
-    private int Linea;
+    String Token;
+    String Lexema;
+    int Linea;
     
     public Tokens(String Token, String Lexema, int Linea){
         this.Token = Token;

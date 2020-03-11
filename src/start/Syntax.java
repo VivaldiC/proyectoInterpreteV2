@@ -11,6 +11,7 @@ import java.util.ArrayList;
  *
  * @author VIVALDI
  */
+
 public class Syntax {
     ArrayList<Tokens> nlt = new ArrayList<Tokens>();
     Token aux2;
@@ -23,6 +24,7 @@ public class Syntax {
     public Syntax(ArrayList<Tokens> nlt){
         
     }
+    
     public String Imprimir(){
         
         return impresion;

@@ -1,0 +1,25 @@
+dPaquete otroPaquete;
+
+dEntero unEntero= 5;
+dCadena unEstring = "Hola Mundo";
+dFlotante unFlotante = 5.5;
+
+publico MiPrimerPrograma Main(){
+    dRepetir (dEntero i = 0; i < 10 ; i = i + 1;){
+        dImprimir("Hola Mundo v 2.0");
+    }
+
+    dCondicion (unEntero == 5 ){
+        dImprimir("SÃ­ es igual");
+    }
+    then {
+        dImprimir ("No es igual");
+    }
+    else{
+        dImprimir ("tampoco jeje");
+    }
+
+    dMientras (unEnero >= 4){
+        dImprimir("Es menor o igual a 5");
+    }
+}

@@ -1,4 +1,4 @@
-dPaquete paquete;
+dPaquete UnPaquete;
 
 dEntero unEntero = 5;
 dString unEstring = "Hola Mundo";
@@ -9,7 +9,7 @@ dRepetir (dEntero i = 0; i < 10 ; i = i + 1;){
 }
 
 dCondicion (unEntero == 5 ){
-    dImprimir("Sí es igual");
+    dImprimir("SÃ­ es igual");
 }
 then {
     dImprimir ("No es igual");

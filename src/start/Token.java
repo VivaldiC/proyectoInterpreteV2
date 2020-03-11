@@ -12,13 +12,13 @@ import java.util.regex.Pattern;
  *
  * @author VIVALDI
  */
+
 public enum Token {
     MAIN_KEYWORD("Main"),
     DENTERO_KEYWORD ("dEntero"),
     DCONDICION_KEYWORD ("dCondicion"),
     DMIENTRAS_KEYWORD ("dMientras"),
     ELSE_KEYWORD ("else"),
-    THEN_KEYWORD("then"),
     DCADENA_KEYWORD("dCadena"),
     DFLOTANTE_KEYWORD("dFlotante"),
     DIMPRIMIR_KEYWORD("dImprimir"),

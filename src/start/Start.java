@@ -16,11 +16,12 @@ public class Start {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    
+    
+    public void empezar(){
         Lexer lexer = new Lexer("font.txt");
         Syntax ns;
         ArrayList<Tokens> nl = new ArrayList<Tokens>();
-        
         while (!lexer.isExausthed()) {
             System.out.printf("%-18s %s\n", lexer.currentToken(), lexer.currentLexema());
             Tokens nt = new Tokens();
@@ -33,6 +34,8 @@ public class Start {
             lexer.moveAhead();
         }
         
+        
+        
         for (int i = 0; i < nl.size(); i++) {
             System.out.println("-----------------------");
             System.out.println(nl.get(i).getToken());
@@ -40,6 +43,8 @@ public class Start {
             System.out.println(nl.get(i).getLinea());
             System.out.println("-----------------------");
         }
+        
+        
         ns = new Syntax(nl);
         System.out.println(ns.Imprimir());
         
