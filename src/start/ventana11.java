@@ -31,6 +31,7 @@ public class ventana11 extends javax.swing.JFrame {
     String texto="";
     String Documento1;
     NumeroLinea numerolinea;
+    Sintactico newsintactico;
     /**
      * Creates new form ventana1
      */
@@ -73,7 +74,7 @@ public class ventana11 extends javax.swing.JFrame {
         
         ns = new Syntax(nl);
         System.out.println(ns.Imprimir());
-        
+        newsintactico = new Sintactico(nl);
 
         if (lexer.isSuccessful()) {
             System.out.println("Ok! :D");
@@ -81,8 +82,13 @@ public class ventana11 extends javax.swing.JFrame {
             System.out.println(lexer.errorMessage());
         }
     }
+    
+    public void escribirEnPanel(String mensaje){
+        PanelRes.setText(mensaje);
+    }
+    /*
     public void sintactico(){
-        Sintactico ns = new Sintactico();
+        Sintactico ns = new Sintactico(nl);
         
         for (int i = 0; i < nl.size(); i++) {
             String token = nl.get(i).getToken();
@@ -90,6 +96,9 @@ public class ventana11 extends javax.swing.JFrame {
                 case "MAIN_KEYWORD":
                     break;
                 case "DENTERO_KEYWORD":
+                    if (ns.verificarEntero(i) == false){
+                        
+                    }
                     break;
                 case "DCONDICION_KEYWORD":
                     break;
@@ -154,6 +163,7 @@ public class ventana11 extends javax.swing.JFrame {
             }
         }
     }
+    */
     public void imprimir(){
         
         for (int i = 0; i < nl.size(); i++) {
@@ -345,7 +355,6 @@ public class ventana11 extends javax.swing.JFrame {
 
     private void AnLexicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnLexicoActionPerformed
         PanelRes.setText("");
-        PanelRes.setText(texto);
         if(seleccionar.showDialog(null, "Guardar")== JFileChooser.APPROVE_OPTION){
             Archivo=seleccionar.getSelectedFile();
             if(Archivo.getName().endsWith("txt")){
@@ -364,6 +373,7 @@ public class ventana11 extends javax.swing.JFrame {
                         }
         }
         empezar();
+        newsintactico.siguienteStament();
     }//GEN-LAST:event_AnLexicoActionPerformed
     public void analizer(String currentLexema, Token currentToken){
         this.currentToken = currentToken;
