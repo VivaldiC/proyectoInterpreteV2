@@ -37,7 +37,6 @@ public class Lexer {
             errorMessage = "Could not read file: " + filePath;
             return;
         }
-
         blankChars.add('\r');
         blankChars.add('\n');
         blankChars.add((char) 8);
@@ -45,7 +44,6 @@ public class Lexer {
         blankChars.add((char) 11);
         blankChars.add((char) 12);
         blankChars.add((char) 32);
-
         moveAhead();
     }
 

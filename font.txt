@@ -9,7 +9,7 @@ dRepetir (dEntero i = 0; i < 10 ; i = i + 1;){
 }
 
 dCondicion (unEntero == 5 ){
-    dImprimir("SÃ­ es igual");
+    dImprimir("SÃÂÃÂÃÂÃÂ­ es igual");
 }
 then {
     dImprimir ("No es igual");

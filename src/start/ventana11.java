@@ -58,7 +58,7 @@ public class ventana11 extends javax.swing.JFrame {
         }
         
         
-        
+        /*
         for (int i = 0; i < nl.size(); i++) {
             
             texto = texto + "----- Token: " +  nl.get(i).getToken() + " Lexema: " + nl.get(i).getLexema() + " Linea: " + i +"  -------" + "\n";
@@ -69,12 +69,13 @@ public class ventana11 extends javax.swing.JFrame {
             System.out.println("-----------------------");
             
             
-        }
+        }*/
         
         
         ns = new Syntax(nl);
         System.out.println(ns.Imprimir());
         newsintactico = new Sintactico(nl);
+        newsintactico.reiniciarContador();
 
         if (lexer.isSuccessful()) {
             System.out.println("Ok! :D");
@@ -374,6 +375,7 @@ public class ventana11 extends javax.swing.JFrame {
         }
         empezar();
         newsintactico.siguienteStament();
+        PanelRes.setText(newsintactico.getMensaje());
     }//GEN-LAST:event_AnLexicoActionPerformed
     public void analizer(String currentLexema, Token currentToken){
         this.currentToken = currentToken;

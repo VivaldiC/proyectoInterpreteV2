@@ -49,7 +49,9 @@ public enum Token {
 
     STRING ("\"[^\"]+\""),
     NUMBER ("\\d+(\\.\\d+)?"),
-    IDENTIFIER ("\\w+");    
+    IDENTIFIER ("\\w+"), 
+
+    SALTOLINEA("\n\r");
 
     private final Pattern pattern;
 
